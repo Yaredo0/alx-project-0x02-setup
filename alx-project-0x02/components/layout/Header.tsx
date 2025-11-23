@@ -1,14 +1,16 @@
-// components/layout/Header.tsx
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
-    <header style={{ padding: "1rem", backgroundColor: "#f5f5f5" }}>
-      <h1>My Project Header</h1>
-      <nav>
-        <Link href="/home">Home</Link> |{" "}
-        <Link href="/about">About</Link>
+    <header className="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+      <h1 className="text-xl font-bold">My Next.js App</h1>
+      <nav className="space-x-6">
+        <Link href="/home" className="hover:underline">Home</Link>
+        <Link href="/about" className="hover:underline">About</Link>
+        <Link href="/posts" className="hover:underline">Posts</Link>
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
